@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --box: 17px;
+  --bg: 34, 46, 70;
+  --bg2: #eee;
+  --border: #ccc;
+  --text: #222;
+  --width: 1280px;
+}
+/*
+.Box:after,
+.Box:before {
+  position: absolute;
+  content: " ";
+  border-left: calc(var(--box) / 2) solid transparent;
+  border-right: calc(var(--box) / 2) solid transparent;
+}
+.Box:before {
+  border-top: calc(var(--box) / 2) solid rgba(255, 255, 255, 0.1);
+}
+.Box:after {
+  bottom: 0;
+  border-bottom: calc(var(--box) / 2) solid rgba(0, 0, 0, 0.1);
+}
+.Word-overlay-mirror:after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-sizing: content-box;
+  z-index: 10;
+  background: linear-gradient(
+    0deg,
+    rgba(var(--bg), 1) 0%,
+    rgba(var(--bg), 0.85) 65%,
+    rgba(var(--bg), 0.5) 100%
+  );
+}
+.Word-mirror-false {
+  padding-top: 300px;
+}
+.Word-mirror-true {
+  box-sizing: content-box;
+  padding-bottom: 300px;
+}
+.Word + .Word {
+  padding-top: 1px;
+}
+.Word-overlay {
+  position: relative;
+}
+
+.Word-overlay:after {
+  content: " ";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+*/
