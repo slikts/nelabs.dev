@@ -76,6 +76,7 @@ const App = () => {
           title="Home"
           hideTitle
           bg={theme.bg}
+          bg2={"#223457"}
           color={theme.light}
           logoColor={theme.hl2}
           minHeight={`calc(100% - ${theme.panelHeight * 3}px)`}

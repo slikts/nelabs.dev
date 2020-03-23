@@ -9,6 +9,7 @@ const Panel = ({
   children,
   title,
   bg,
+  bg2,
   color,
   hideTitle,
   next,
@@ -141,6 +142,10 @@ const Panel = ({
       id={id}
       css={css`
         background: ${bg};
+        ${bg2 &&
+          css`
+            background-image: linear-gradient(to bottom, ${bg2}, ${bg});
+          `}
         color: ${color};
         min-height: ${minHeight};
         padding: 2em 0 0;
@@ -168,7 +173,7 @@ const Panel = ({
                 font-size: inherit;
                 text-transform: uppercase;
                 position: relative;
-                top: 0.05em;
+                top: 0.075em;
                 z-index: 10;
               `}
             >

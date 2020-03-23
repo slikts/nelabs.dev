@@ -68,7 +68,7 @@ const About = () => {
               clip-path: circle(50%);
             `}
           >
-            <img src="./assets/portrait.jpg" alt="Portrait" />
+            <img src="/assets/portrait.jpg" alt="Portrait" />
           </p>
           <p
             className="portrait-by"
