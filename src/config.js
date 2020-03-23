@@ -9,8 +9,9 @@ export default {
   texts: [
     // `w`,
     // `articles`,
-    `welcome to nelabs.dev`,
-    `č ķ ģ`
+    `nelabs.dev`,
+    `č ķ ģ`,
+    "welcome"
     // `abcdefghijk`,
     // `lorem ipsum`,
   ],

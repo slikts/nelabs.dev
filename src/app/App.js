@@ -76,10 +76,12 @@ const App = () => {
           title="Home"
           hideTitle
           bg={theme.bg}
-          bg2={"#223457"}
+          // bg2={"#22314f"}
           color={theme.light}
           logoColor={theme.hl2}
-          minHeight={`calc(100% - ${theme.panelHeight * 3}px)`}
+          minHeight={`calc(100% - ${theme.panelHeight * 3}px - ${
+            theme.menuMargin
+          }px)`}
           wide
         >
           <Flair />
