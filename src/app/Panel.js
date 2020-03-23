@@ -186,10 +186,12 @@ const Panel = ({
                 href={`#${id}`}
                 onClick={e => {
                   e.preventDefault();
-                  document.querySelector(`#${id}`).scrollIntoView({
+                  const hash = `#${id}`;
+                  document.querySelector(hash).scrollIntoView({
                     block: `start`,
                     behavior: `smooth`
                   });
+                  window.history.replaceState("", "", hash);
                 }}
               >
                 {title}

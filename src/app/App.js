@@ -153,6 +153,10 @@ const Accordion = ({ children }) => {
           state = "outOfView";
         } else if (height + top - 2 <= height) {
           state = "active";
+
+          // const id = body.current.getAttribute("id");
+          // const hash = `#${id}`;
+
           menuRef.current.style.color = children[i - 1]?.props.color;
           logoRef.current.style.background = children[i]?.props.logoColor;
           if (window.innerWidth < 400 && i !== 0) {

@@ -40,6 +40,7 @@ const LogoBox = ({ size = 25, color, boxRef, ...props }) => {
             block: `start`,
             behavior: `smooth`
           });
+          window.history.replaceState("", "", ".");
         }}
       >
         <Boxes boxRef={boxRef} size={size} duration={2} color={color} />
