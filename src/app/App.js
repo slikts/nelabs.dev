@@ -79,9 +79,7 @@ const App = () => {
           // bg2={"#22314f"}
           color={theme.light}
           logoColor={theme.hl2}
-          minHeight={`calc(100% - ${theme.panelHeight * 3}px - ${
-            theme.menuMargin
-          }px)`}
+          minHeight={`calc(100% - ${theme.panelHeight * 3}px)`}
           wide
         >
           <Flair />
