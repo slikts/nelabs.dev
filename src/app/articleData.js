@@ -29,5 +29,10 @@ export default [
     title: "Appreciating the elegant simplicity of Immer",
     date: "2019-10-17",
     url: "https://gist.github.com/slikts/a975de5507e687a3718ad55c6745e9f5"
+  },
+  {
+    title: "Linuxifying Windows for development",
+    date: "2019-07-25",
+    url: "https://gist.github.com/slikts/63abbeb63b72b3f515c70258bfc19a44"
   }
 ];

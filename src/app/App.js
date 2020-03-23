@@ -29,6 +29,7 @@ const App = () => {
       background: ${theme.bg};
       color: ${theme.light};
       font-family: "Open Sans", sans-serif;
+      line-height: 1.175;
     }
     html {
       // height: calc(100% - ${theme.menuMargin}px);
@@ -77,7 +78,7 @@ const App = () => {
           bg={theme.bg}
           color={theme.light}
           logoColor={theme.hl2}
-          minHeight="100%"
+          minHeight={`calc(100% - ${theme.panelHeight * 3}px)`}
           wide
         >
           <Flair />
@@ -103,7 +104,7 @@ const App = () => {
           title="About"
           bg={theme.dark}
           color={theme.light}
-          logoColor={theme.hl1}
+          logoColor={theme.link}
           minHeight="100%"
         >
           <About />
@@ -153,6 +154,11 @@ const Accordion = ({ children }) => {
           state = "active";
           menuRef.current.style.color = children[i - 1]?.props.color;
           logoRef.current.style.background = children[i]?.props.logoColor;
+          if (window.innerWidth < 400 && i !== 0) {
+            logoRef.current.parentNode.classList.add("notext");
+          } else {
+            logoRef.current.parentNode.classList.remove("notext");
+          }
         } else if (height + top - panelHeight <= height) {
           state = "preactive";
         } else if (

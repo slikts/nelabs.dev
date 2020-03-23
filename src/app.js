@@ -8,8 +8,6 @@ import { useWindowSize } from "./app/util";
 const Wrapper = () => {
   const { width } = useWindowSize();
 
-  console.log(width, Math.min(width - 50, defaultTheme.contentWidth));
-
   const theme = {
     ...defaultTheme,
     contentWidth: Math.min(width - 50, defaultTheme.contentWidth)

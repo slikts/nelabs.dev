@@ -27,8 +27,8 @@ const Panel = ({
 
   const jump = keyframes`
     0% { bottom: ${-arrSize / 2}px; }
-    6% { bottom: ${-arrSize}px; }
-    12% { bottom: ${-arrSize / 2}px; }
+    12% { bottom: ${-arrSize}px; }
+    24% { bottom: ${-arrSize / 2}px; }
   `;
 
   const menuStyle = css`
@@ -108,7 +108,7 @@ const Panel = ({
           bottom: -${arrSize / 2}px;
           transition: bottom 0.5s;
           visibility: hidden;
-          animation: ${jump} 4s infinite;
+          animation: ${jump} 2s infinite;
           animation-delay: ${i / 6}s;
         }
         &[data-state="firstNext"]::after,

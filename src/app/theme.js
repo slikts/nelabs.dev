@@ -9,6 +9,7 @@ export const defaultTheme = {
   dark: "#252627",
   light: "#fff9fb",
   link: "#0366d6",
+  link2: "#5196e3",
   palette: colors,
   headingFontFamily: `"Yanone Kaffeesatz", sans-serif`,
   headingFontWeight: 300,

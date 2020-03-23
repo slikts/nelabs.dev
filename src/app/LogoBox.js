@@ -27,6 +27,12 @@ const LogoBox = ({ size = 25, color, boxRef, ...props }) => {
             text-decoration: none;
           }
           user-select: none;
+          .text {
+            transition: opacity 0.05s;
+          }
+          &.notext .text {
+            opacity: 0;
+          }
         `}
         onClick={e => {
           e.preventDefault();
@@ -37,7 +43,7 @@ const LogoBox = ({ size = 25, color, boxRef, ...props }) => {
         }}
       >
         <Boxes boxRef={boxRef} size={size} duration={2} color={color} />
-        nelabs.dev
+        <span className="text">nelabs.dev</span>
       </a>
     </div>
   );

@@ -6,6 +6,12 @@ export default [
   //   desc: ""
   // },
   {
+    name: "JavaScript and TypeScript tooling overview",
+    url: "http://tooling.js.org/",
+    img: "./assets/tooling-preview.jpg",
+    desc: ""
+  },
+  {
     name: "Queueable",
     url: "https://github.com/slikts/queueable#readme",
     img:
@@ -26,6 +32,13 @@ export default [
       "https://raw.githubusercontent.com/slikts/tuplerone/master/logo.svg?sanitize=true",
     desc: "<code>WeakMap</code>-based tuples for JavaScript"
   },
+  // {
+  //   name: "JavaScript Equality Table Game",
+  //   url: "https://eqeq.js.org/",
+  //   img:
+  //     "https://raw.githubusercontent.com/slikts/js-equality-game/assets/card.png",
+  //   desc: ""
+  // },
   {
     name: "Symbola",
     url: "https://github.com/slikts/symbola#readme",
