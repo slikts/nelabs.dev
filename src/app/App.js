@@ -12,6 +12,7 @@ import LogoBox from "./LogoBox";
 import Projects from "./Projects";
 import Articles from "./Articles";
 import { ReactComponent as GitHubIcon } from "../assets/github-icon.svg";
+import { ReactComponent as TwitterIcon } from "../assets/twitter-icon.svg";
 
 const App = () => {
   const theme = useTheme();
@@ -43,6 +44,27 @@ const App = () => {
     * {
       box-sizing: border-box;
     }
+    b, strong {
+      font-weight: bold;
+    }
+    section ul,
+    section p {
+      margin: 1em 0;
+    }
+    section ul {
+      list-style-type: disc;
+    }
+    section li {
+      margin-top: 0.25em;
+    }
+  code {
+    background: rgba(27, 31, 35, 0.05);
+    border-radius: 3px;
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier,
+      monospace;
+    margin: 0;
+    padding: 0.2em 0.4em;
+  }
   `;
 
   return (
@@ -70,6 +92,7 @@ const App = () => {
         </Panel>
         <Panel
           title="Projects"
+          // bg="#eee"
           bg={theme.light}
           color={theme.dark}
           logoColor={theme.bg}
@@ -213,21 +236,33 @@ const Accordion = ({ children }) => {
           <div>
             <LogoBox boxRef={logoRef} />
           </div>
-          <div>
+          <div
+            css={css`
+              path {
+                fill: currentColor;
+              }
+              a {
+                margin-left: 0.75em;
+              }
+              svg {
+                height: ${iconSize}px;
+                width: ${iconSize}px;
+              }
+            `}
+          >
+            <a
+              href="https://twitter.com/slikts"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TwitterIcon />
+            </a>
             <a
               href="https://github.com/slikts"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <GitHubIcon
-                css={css`
-                  path {
-                    fill: currentColor;
-                  }
-                  height: ${iconSize}px;
-                  width: ${iconSize}px;
-                `}
-              />
+              <GitHubIcon />
             </a>
           </div>
         </div>
@@ -236,4 +271,4 @@ const Accordion = ({ children }) => {
   );
 };
 
-const iconSize = 35;
+const iconSize = 25;

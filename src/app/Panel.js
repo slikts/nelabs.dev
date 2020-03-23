@@ -91,7 +91,7 @@ const Panel = ({
 
     transition: font-size 0.1s;
 
-    z-index: ${next};
+    z-index: ${next + 1};
 
     ${i > 0 &&
       css`
@@ -129,6 +129,9 @@ const Panel = ({
               background: ${theme.dark};
               top: 100%;
             }
+            &[data-state="active"]::before {
+              display: none;
+            }
           `}
       `}
   `;
@@ -140,7 +143,7 @@ const Panel = ({
         background: ${bg};
         color: ${color};
         min-height: ${minHeight};
-        padding: ${panelHeight}px 0 0;
+        padding: 2em 0 0;
         position: relative;
       `}
       ref={refs.body}
@@ -195,7 +198,7 @@ const Panel = ({
           css={css`
             margin: auto;
             width: ${wide ? "100%" : `${contentWidth}px`};
-            padding: ${wide ? 0 : panelHeight}px 0;
+            padding: ${wide ? 0 : panelHeight}px 0 1rem;
           `}
         >
           {children ||

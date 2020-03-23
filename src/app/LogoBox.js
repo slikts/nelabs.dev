@@ -14,6 +14,9 @@ const LogoBox = ({ size = 25, color, boxRef, ...props }) => {
         font-family: ${theme.headingFontFamily};
         font-weight: ${theme.headingFontWeight};
         font-size: ${theme.logoSize}px;
+        @media screen and (max-width: 500px) {
+          font-size: 1.5rem;
+        }
       `}
     >
       <a
@@ -52,7 +55,7 @@ const Boxes = props => (
       transition: background 0.2s;
       background: #bb0a21;
       display: inline-block;
-      margin-right: 0.3em;
+      margin-right: 0.7rem;
       vertical-align: middle;
     `}
     className="init"

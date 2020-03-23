@@ -1,4 +1,10 @@
 export default [
+  // {
+  //   name: "",
+  //   url: "",
+  //   img: "",
+  //   desc: ""
+  // },
   {
     name: "Queueable",
     url: "https://github.com/slikts/queueable#readme",
@@ -25,11 +31,5 @@ export default [
     url: "https://github.com/slikts/symbola#readme",
     img: "https://raw.githubusercontent.com/slikts/symbola/master/logo.png",
     desc: "Swift-like protocol extension in JavaScript using symbols"
-  },
-  {
-    name: "",
-    url: "",
-    img: "",
-    desc: ""
   }
 ];

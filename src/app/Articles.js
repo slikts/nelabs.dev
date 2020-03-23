@@ -11,11 +11,11 @@ import { markup } from "./util";
 const Articles = () => {
   return (
     <div>
-      <div>
+      <ol>
         {articles.map(props => (
-          <Article {...props} key={props.name} />
+          <Article {...props} key={props.url} />
         ))}
-      </div>
+      </ol>
     </div>
   );
 };
@@ -24,13 +24,40 @@ export default React.memo(Articles);
 
 const Article = ({ title, url, date }) => {
   return (
-    <div>
-      <h3>
-        <a href={url} {...markup(title)}></a>
+    <li
+      css={css`
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        &:last-child {
+          border-bottom: none;
+        }
+      `}
+    >
+      <h3
+        css={css`
+          font-size: 1.25rem;
+          a {
+            color: inherit;
+          }
+        `}
+      >
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          {...markup(title)}
+        ></a>
       </h3>
-      <p title={date}>
+      <p
+        title={date}
+        css={css`
+          margin-top: 0.25rem;
+          font-size: 0.8rem;
+          color: #eee;
+        `}
+      >
         {formatDistanceToNow(parseISO(date), { addSuffix: true })}
       </p>
-    </div>
+    </li>
   );
 };

@@ -16,6 +16,7 @@
     "lit-html": "^1.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-responsive": "^8.0.3",
     "react-scripts": "3.4.1",
     "tuplerone": "^3.3.3",
     "web-animations-js": "^2.3.2"

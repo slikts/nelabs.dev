@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import React, { useRef, useEffect } from "react";
-import { jsx, css } from "@emotion/core";
+import { useRef, useEffect } from "react";
+import { jsx } from "@emotion/core";
 import { setupAnimation } from "../flair";
 
 const Flair = () => {

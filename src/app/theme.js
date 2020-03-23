@@ -15,7 +15,7 @@ export const defaultTheme = {
   panelHeight: 70,
   headingSize: 40,
   logoSize: 30,
-  contentWidth: 700,
+  contentWidth: 960,
   menuMargin: 25
 };
 
