@@ -1,14 +1,17 @@
-name: CI
-on: [push]
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
 jobs:
   build:
-    name: Deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: borales/actions-yarn@v2.0.0
+      - uses: sterlingwes/gh-pages-deploy-action@v1.1
         with:
-          cmd: install
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: deploy
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+          source-directory: build
+          build-command: yarn build
