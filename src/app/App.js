@@ -164,6 +164,16 @@ const Accordion = ({ children }) => {
           } else {
             logoRef.current.parentNode.classList.remove("notext");
           }
+
+          if (i !== 0) {
+            if (!window.paused && window.playing) {
+              window.paused = true;
+              window.playing.pause();
+            }
+          } else if (window.paused) {
+            window.paused = false;
+            window.playing.play();
+          }
         } else if (height + top - panelHeight <= height) {
           state = "preactive";
         } else if (
