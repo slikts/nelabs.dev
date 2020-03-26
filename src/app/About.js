@@ -19,10 +19,10 @@ const About = () => {
         css={css`
           flex-grow: 1;
           display: flex;
-          @media screen and (min-width: 600px) {
-            flex-direction: column;
-          }
-          justify-content: space-evenly;
+          /* flex-direction: column; */
+          /* @media screen and (min-width: 600px) {
+          } */
+          justify-content: center;
           flex-wrap: wrap;
           align-items: center;
           svg {
@@ -94,7 +94,7 @@ const About = () => {
         </div>
         <section
           css={css`
-            margin: 0 1rem;
+            margin: 0 2rem;
           `}
         >
           <ul
@@ -137,6 +137,7 @@ const About = () => {
       </section>
       <div
         css={css`
+          display: none;
           flex-basis: 50%;
           word-wrap: break-word;
           p {
