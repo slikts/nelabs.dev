@@ -20,7 +20,8 @@ import { Circulator } from "circulator";
 //   `#859900`,
 // ]
 // const colors = [`#56B949`, `#30499B`, `#EE4035`, `#F0A32F`]
-export const colors = [`#004777`, `#a30000`, `#ff7700`, `#efd28d`, `#00afb5`];
+// export const colors = [`#004777`, `#a30000`, `#ff7700`, `#efd28d`, `#00afb5`];
+export const colors = [`#004777`, `#bb0a21`, `#ff7700`, `#efd28d`, `#00afb5`];
 // const colors = [`#42ffdf`, `#2b8dff`, `#ff4874`, `#164187`, `#ff9c84`]
 
 // http://colorbrewer2.org/?type=qualitative&scheme=Paired&n=12
