@@ -15,6 +15,7 @@ export const useWindowSize = () => {
       }
     };
     window.addEventListener("resize", handler);
+    handler();
 
     return () => void window.removeEventListener("resize", handler);
     // eslint-disable-next-line react-hooks/exhaustive-deps
