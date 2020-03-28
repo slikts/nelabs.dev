@@ -37,7 +37,7 @@ const Article = ({ title, url, date }) => {
         css={css`
           font-size: 1.25rem;
           a {
-            color: inherit;
+            color: #fff;
           }
         `}
       >

@@ -208,10 +208,7 @@ const Panel = ({
             padding: ${wide ? 0 : panelHeight}px 0 1rem;
           `}
         >
-          {children ||
-            Array(200)
-              .fill("Lorem ipsum dolor sit amet.")
-              .join(" ")}
+          {children}
         </div>
       </div>
     </div>

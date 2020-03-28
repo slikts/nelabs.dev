@@ -1,5 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render, hydrate } from "react-dom";
 import Wrapper from "./app/Wrapper";
 
-ReactDOM.render(<Wrapper />, document.getElementById("root"));
+const rootElement = document.querySelector("#root");
+
+if (rootElement.hasChildNodes()) {
+  hydrate(<Wrapper />, rootElement);
+} else {
+  render(<Wrapper />, rootElement);
+}
