@@ -274,6 +274,7 @@ const Accordion = ({ children }) => {
               href="https://twitter.com/slikts"
               target="_blank"
               rel="noopener noreferrer"
+              title="Twitter"
             >
               <TwitterIcon />
             </a>
@@ -281,6 +282,7 @@ const Accordion = ({ children }) => {
               href="https://github.com/slikts"
               target="_blank"
               rel="noopener noreferrer"
+              title="GitHub"
             >
               <GitHubIcon />
             </a>
