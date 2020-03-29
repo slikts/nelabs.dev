@@ -13,10 +13,8 @@ export const defaultTheme = {
   palette: colors,
   headingFontFamily: `"Yanone Kaffeesatz", sans-serif`,
   headingFontWeight: 300,
-  panelHeight: 70,
   headingSize: 40,
   logoSize: 30,
-  contentWidth: 960,
   menuMargin: 25
 };
 

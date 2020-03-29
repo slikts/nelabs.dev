@@ -4,6 +4,7 @@ import { jsx, css, keyframes } from "@emotion/core";
 import hexToRgba from "hex-to-rgba";
 
 import { useTheme } from "./theme";
+import { cssVar } from "./util";
 
 const Panel = ({
   children,
@@ -23,7 +24,6 @@ const Panel = ({
 }) => {
   const theme = useTheme();
 
-  const { panelHeight, contentWidth } = theme;
   const arrSize = 20;
 
   const jump = keyframes`
@@ -40,7 +40,7 @@ const Panel = ({
       color: ${prevColor || color};
     }
     width: 100%;
-    height: ${panelHeight}px;
+    height: var(--panelHeightPx);
     position: absolute;
     top: 0;
     &[data-state="active"] {
@@ -50,7 +50,7 @@ const Panel = ({
     &[data-state="firstNext"],
     &[data-state="next"] {
       position: fixed;
-      bottom: ${next * panelHeight + theme.menuMargin}px;
+      bottom: calc(${next} * var(--panelHeightPx) + ${theme.menuMargin}px);
       top: auto;
     }
     &[data-state="firstNext"],
@@ -156,8 +156,8 @@ const Panel = ({
       <div css={menuStyle} ref={refs.header} className="init">
         <div
           css={css`
-            width: ${contentWidth}px;
-            height: ${panelHeight}px;
+            width: var(--contentWidth);
+            height: var(--panelHeightPx);
             margin: auto;
             display: flex;
             align-items: center;
@@ -204,8 +204,8 @@ const Panel = ({
         <div
           css={css`
             margin: auto;
-            width: ${wide ? "100%" : `${contentWidth}px`};
-            padding: ${wide ? 0 : panelHeight}px 0 1rem;
+            width: ${wide ? "100%" : `var(--contentWidth)`};
+            padding: ${wide ? 0 : "var(--panelHeightPx)"} 0 1rem;
           `}
         >
           {children}

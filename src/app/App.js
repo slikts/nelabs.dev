@@ -13,6 +13,7 @@ import Projects from "./Projects";
 import Articles from "./Articles";
 import { ReactComponent as GitHubIcon } from "../assets/github-icon.svg";
 import { ReactComponent as TwitterIcon } from "../assets/twitter-icon.svg";
+import { cssVar } from "./util";
 
 const App = () => {
   const theme = useTheme();
@@ -58,14 +59,14 @@ const App = () => {
     section li {
       margin-top: 0.25em;
     }
-  code {
-    background: rgba(27, 31, 35, 0.05);
-    border-radius: 3px;
-    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier,
-      monospace;
-    margin: 0;
-    padding: 0.2em 0.4em;
-  }
+    code {
+      background: rgba(27, 31, 35, 0.05);
+      border-radius: 3px;
+      font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier,
+        monospace;
+      margin: 0;
+      padding: 0.2em 0.4em;
+    }
   `;
 
   return (
@@ -79,7 +80,7 @@ const App = () => {
           // bg2={"#22314f"}
           color={theme.light}
           logoColor={theme.hl2}
-          minHeight={`calc(100% - ${theme.panelHeight * 3}px)`}
+          minHeight={`calc(100% - var(--panelHeight) * 3px)`}
           wide
         >
           <Flair />
@@ -118,8 +119,6 @@ const App = () => {
 export default App;
 
 const Accordion = ({ children }) => {
-  const theme = useTheme();
-  const { panelHeight } = theme;
   const refs = useMemo(
     () =>
       Array.from({ length: children.length }, () => ({
@@ -137,6 +136,7 @@ const Accordion = ({ children }) => {
         header.current.classList.remove("init");
       });
     }, 100);
+    const panelHeight = cssVar("panelHeight");
 
     const updateHeadings = () => {
       // console.clear();
@@ -221,7 +221,6 @@ const Accordion = ({ children }) => {
           prevColor: prev?.color,
           refs: refs[i],
           key: i,
-          panelHeight,
           id: el.props.title?.toLowerCase()
         });
       })}
@@ -241,10 +240,10 @@ const Accordion = ({ children }) => {
             display: flex;
             align-items: top;
             justify-content: space-between;
-            width: ${theme.contentWidth}px;
+            width: var(--contentWidth);
             height: 0;
             > * {
-              height: ${theme.panelHeight}px;
+              height: calc(var(--panelHeight) * 1px);
               display: flex;
               align-items: center;
             }
