@@ -75,7 +75,8 @@ const About = () => {
             css={css`
               transition: opacity 0.1s ease-in;
               position: absolute;
-              top: 50%;
+              top: calc(50% - 1em);
+              line-height: 1em;
               width: 100%;
               opacity: 0;
               text-indent: -2000em;
