@@ -4,7 +4,6 @@ import { jsx, css, keyframes } from "@emotion/core";
 import hexToRgba from "hex-to-rgba";
 
 import { useTheme } from "./theme";
-import { cssVar } from "./util";
 
 const Panel = ({
   children,
