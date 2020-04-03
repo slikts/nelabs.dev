@@ -42,7 +42,7 @@ export default [
   {
     name: "Symbola",
     url: "https://github.com/slikts/symbola#readme",
-    img: "https://raw.githubusercontent.com/slikts/symbola/master/logo.png",
+    img: "./assets/symbola.png",
     desc: "Swift-like protocol extension in JavaScript using symbols"
   }
 ];
