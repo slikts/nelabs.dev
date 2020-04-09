@@ -65,7 +65,8 @@ const About = () => {
                 transition-property: opacity, transform;
               }
               overflow: hidden;
-              clip-path: circle(50%);
+              border-radius: 50%;
+              /* clip-path: circle(50%); */
             `}
           >
             <img src="/assets/portrait.jpg" alt="Portrait" />
@@ -98,6 +99,18 @@ const About = () => {
             margin: 0 2rem;
           `}
         >
+          <p css={css`
+            font-size: 1.3em;
+            margin-bottom: -.5em;
+          `}>Reinis Ivanovs</p>
+          <p>Software developer</p>
+          <p css={css`
+            display: none;
+            max-width: 250px;
+            @media screen and (max-width: 600px) {
+              display: none;
+            }
+          `}>I have a strong belief that there are still many unexplored low-hanging fruit in software development.</p>
           <ul
             css={css`
               list-style: none;
