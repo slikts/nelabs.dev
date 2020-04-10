@@ -111,6 +111,8 @@ const About = () => {
               display: none;
             }
           `}>I have a strong belief that there are still many unexplored low-hanging fruit in software development.</p>
+          <div
+          css={css`font-size: .85em;`}>
           <ul
             css={css`
               list-style: none;
@@ -147,6 +149,7 @@ const About = () => {
           <p>
             <a href="mailto:dabas@untu.ms">dabas@untu.ms</a>
           </p>
+          </div>
         </section>
       </section>
       <div
