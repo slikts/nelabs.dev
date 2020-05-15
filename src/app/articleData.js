@@ -5,6 +5,11 @@ export default [
   //   url: ""
   // },
   {
+    title: "Deno is probably not worth it right now",
+    date: "2020-05-15",
+    url: "https://dev.to/slikts/deno-is-probably-not-worth-it-right-now-1gg"
+  },
+  {
     title: "React context vs Redux in 2020",
     date: "2020-02-25",
     url: "https://gist.github.com/slikts/57ff1acdb6f5b2ea075b701d1daf896d"
